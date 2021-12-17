@@ -1,0 +1,144 @@
+@font-face {
+    font-family: siteFont;
+    src: url("../font/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: titleFont;
+    src: url("../font/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+}
+body {
+    font-family: siteFont;
+    height: 3000px;
+}
+.title {
+    font-family: titleFont;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 60px 0px;
+    position: relative;
+}
+.title::after {
+    content: '';
+    width: 100px;
+    height: 10px;
+    background: linear-gradient(
+        45deg,
+        rgba(0,155,255,0.9), 
+        rgba(0,255,111,0.9), 
+        rgba(0,155,255,0.9) );
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+}
+.site-color {
+    color: #7fff94;
+}
+
+
+/* Navbar */
+nav.navbar {
+    background-color: #7fff94;
+}
+a.nav-link {
+    text-transform: uppercase;
+}
+
+/* Banner */
+.carousel-inner img {
+    width: 100%;
+    /* height: 25vw; */
+    height: 400px;
+    object-fit: cover;
+}
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-content {
+    text-align: center;
+    padding: 150px; /*edit*/
+}
+
+/* About */
+
+.about-img img {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+    object-position: 0px -50px;
+    display: inline-block;
+}
+.about-img {
+    position: relative;
+}
+.about-img::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(20, 90, 136, 0.5), 
+        rgba(13, 218, 101, 0.5), 
+        rgba(5, 128, 211, 0.5) );     
+}
+
+.service .card img.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+
+}
+
+.service .service-progress {
+    background-image: url("../image/banner (1).jpg");
+    background-attachment: fixed;
+}
+.footer p {
+    border: 3px solid red;
+    text-align: center;
+    background: linear-gradient(to right, #f00, #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#up {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0;
+    transition: all 1s ease-in;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .banner-content {
+        font-size: 0.7rem;
+    }
+    .about-img img {
+        max-height: 100%;
+        object-position: 0px;
+    }
+}
